@@ -40,12 +40,12 @@ def search_torrents(page=1):
                     torrent_title = row.select("td.coll-1.name a")[1].text.strip()
                     torrent_page = "https://www.1337x.to" + row.select("td.coll-1.name a")[1]['href']
                     size = row.select_one("td.coll-4").text.strip() if row.select_one("td.coll-4") else "N/A"
-                    seeders = row.select_one("td.coll-2").text.strip() if row.select_one("td.coll-2") else "N/A"
-
+                    time = row.select_one("td.coll-date").text.strip() if row.select_one("td.coll-date") else "N/A"
+                
                     # Store the torrent link for later selection
                     torrent_links.append(torrent_page)
 
-                    result_text.insert(tk.END, f"{i + 1}. {torrent_title} | Size: {size} | Seeders: {seeders}\n")
+                    result_text.insert(tk.END, f"{i + 1}. {torrent_title} | Size: {size} | Uploaded: {time}\n")
                 except (AttributeError, IndexError):
                     result_text.insert(tk.END, f"{i + 1}. Error parsing row, skipping.\n")
 
