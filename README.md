@@ -27,7 +27,6 @@ Enjoy searching and downloading torrents!
 
 ## ⚠️ Known Issues & Limitations
 Antivirus Warning: Some antivirus programs may flag the .exe as suspicious (false positive).
-Platform-Specific: This release is for Windows only.
 
 ## 📢 Disclaimer
 This tool is for educational purposes only. Use it responsibly. The developer is not responsible for any misuse of this tool.
